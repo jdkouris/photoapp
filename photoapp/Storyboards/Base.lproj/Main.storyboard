@@ -190,7 +190,7 @@
         <!--Navigation Controller-->
         <scene sceneID="gcK-m5-dJ7">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="IET-Hb-hSh" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="loginNavController" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="IET-Hb-hSh" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ho2-FO-mvp">
                         <autoresizingMask key="autoresizingMask"/>
