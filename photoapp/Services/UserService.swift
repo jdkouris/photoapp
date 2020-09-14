@@ -11,8 +11,32 @@ import FirebaseFirestore
 
 class UserService {
     
-    static func retrieveProfile(userId: String, completion: @escaping (PhotoUser?) -> Void) {
+    static func createProfile(userId: String, username: String, completion: @escaping (PhotoUser?) -> Void) {
+        // Create a dictionary for the profile data
+        let profileData = ["username": username]
         
+        // Get a firestore reference
+        let db = Firestore.firestore()
+        
+        // Create the document for the userid
+        db.collection("users").document(userId).setData(profileData) { (error) in
+            if error == nil {
+                // Profile created successfully
+                // Create and return a photo user
+                var user = PhotoUser()
+                user.username = username
+                user.userId = userId
+                
+                completion(user)
+            } else {
+                // Something went wrong
+                // Return nil
+                completion(nil)
+            }
+        }
+    }
+    
+    static func retrieveProfile(userId: String, completion: @escaping (PhotoUser?) -> Void) {
         // Get a firestore reference
         let db = Firestore.firestore()
         
@@ -37,7 +61,6 @@ class UserService {
                 // Return nil
                 completion(nil)
             }
-            
         }
     }
     

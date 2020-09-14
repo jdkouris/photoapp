@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class CreateProfileViewController: UIViewController {
     
@@ -14,12 +15,34 @@ class CreateProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func confirmTapped(_ sender: Any) {
+        // Check that there is a user logged in
+        guard Auth.auth().currentUser != nil else { return }
         
+        // Get the username
+        // Check it against whitespaces, new lines, illegal character, etc.
+        let username = usernameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        // Check that the username isn't nil
+        if username == nil || username == "" {
+            // Show an error message
+            return
+        }
+        
+        // Call the user service to create the profile
+        UserService.createProfile(userId: Auth.auth().currentUser!.uid, username: username!) { (user) in
+            // Check if it was created successfully
+            if user != nil {
+                // If so, go to the tab bar controller
+                let tabBarVC = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.tabBarController)
+                self.view.window?.rootViewController = tabBarVC
+                self.view.window?.makeKeyAndVisible()
+            } else {
+                // If not, display error
+            }
+        }
     }
 
 }
