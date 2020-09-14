@@ -21,6 +21,7 @@
 		CC2B56FF250C04E30089E85C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2B56FE250C04E30089E85C /* SettingsViewController.swift */; };
 		CC2B5701250FEE500089E85C /* PhotoUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2B5700250FEE500089E85C /* PhotoUser.swift */; };
 		CC2B5703250FEE840089E85C /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2B5702250FEE840089E85C /* UserService.swift */; };
+		CC2B5705250FF1A20089E85C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2B5704250FF1A20089E85C /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		CC2B56FE250C04E30089E85C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		CC2B5700250FEE500089E85C /* PhotoUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoUser.swift; sourceTree = "<group>"; };
 		CC2B5702250FEE840089E85C /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		CC2B5704250FF1A20089E85C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 		CC2B56F2250C01DC0089E85C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				CC2B5704250FF1A20089E85C /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				CC2B5703250FEE840089E85C /* UserService.swift in Sources */,
 				CC2B56FF250C04E30089E85C /* SettingsViewController.swift in Sources */,
 				CC2B5701250FEE500089E85C /* PhotoUser.swift in Sources */,
+				CC2B5705250FF1A20089E85C /* Constants.swift in Sources */,
 				CC2B56FB250C04610089E85C /* FeedViewController.swift in Sources */,
 				CC2B56DB250BFA760089E85C /* AppDelegate.swift in Sources */,
 				CC2B56DD250BFA760089E85C /* SceneDelegate.swift in Sources */,
