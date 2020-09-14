@@ -23,6 +23,7 @@
 		CC2B5703250FEE840089E85C /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2B5702250FEE840089E85C /* UserService.swift */; };
 		CC2B5705250FF1A20089E85C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2B5704250FF1A20089E85C /* Constants.swift */; };
 		CC2B5707251013620089E85C /* LocalStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2B5706251013620089E85C /* LocalStorageService.swift */; };
+		CC2B5709251024A10089E85C /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2B5708251024A10089E85C /* MainTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		CC2B5702250FEE840089E85C /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		CC2B5704250FF1A20089E85C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CC2B5706251013620089E85C /* LocalStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageService.swift; sourceTree = "<group>"; };
+		CC2B5708251024A10089E85C /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 				CC2B56FA250C04610089E85C /* FeedViewController.swift */,
 				CC2B56FC250C04DA0089E85C /* CameraViewController.swift */,
 				CC2B56FE250C04E30089E85C /* SettingsViewController.swift */,
+				CC2B5708251024A10089E85C /* MainTabBarController.swift */,
 			);
 			name = "View controllers";
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 			files = (
 				CC2B56F9250C02BA0089E85C /* CreateProfileViewController.swift in Sources */,
 				CC2B56F7250C02450089E85C /* LoginViewController.swift in Sources */,
+				CC2B5709251024A10089E85C /* MainTabBarController.swift in Sources */,
 				CC2B5703250FEE840089E85C /* UserService.swift in Sources */,
 				CC2B56FF250C04E30089E85C /* SettingsViewController.swift in Sources */,
 				CC2B5701250FEE500089E85C /* PhotoUser.swift in Sources */,
