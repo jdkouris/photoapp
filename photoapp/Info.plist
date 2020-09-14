@@ -53,6 +53,10 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>$(PRODUCT_NAME) needs access to the Photo Library to upload a photo.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>$(PRODUCT_NAME) needs access to the Camera to upload a photo.</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
