@@ -9,6 +9,12 @@
 import UIKit
 
 class PhotoCell: UITableViewCell {
+    
+    @IBOutlet var usernameLabel: UILabel!
+    @IBOutlet var photoImageView: UIImageView!
+    @IBOutlet var dateLabel: UILabel!
+    
+    var photo: Photo?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,6 +25,16 @@ class PhotoCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func displayPhoto(photo: Photo) {
+        // Set the username
+        usernameLabel.text = photo.byUsername
+        
+        // Set the date
+        dateLabel.text = photo.date
+        
+        // Download the image
     }
 
 }

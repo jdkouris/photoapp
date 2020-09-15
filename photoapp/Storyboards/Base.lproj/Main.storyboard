@@ -70,7 +70,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="300" id="ueh-8c-NRk">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PhotoCell" rowHeight="300" id="ueh-8c-NRk" customClass="PhotoCell" customModule="photoapp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="300"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ueh-8c-NRk" id="M2g-Hl-G8N">
@@ -104,6 +104,11 @@
                                                 <constraint firstItem="ulF-R4-a0A" firstAttribute="leading" secondItem="M2g-Hl-G8N" secondAttribute="leadingMargin" constant="20" id="vlc-hl-Iem"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="8gS-nI-m7U" id="nm7-g3-kwY"/>
+                                            <outlet property="photoImageView" destination="Xbu-63-74C" id="lK2-GJ-zZQ"/>
+                                            <outlet property="usernameLabel" destination="ulF-R4-a0A" id="rB7-zC-5Di"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
