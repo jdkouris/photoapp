@@ -13,6 +13,37 @@ import FirebaseAuth
 
 class PhotoService {
     
+    static func retrievePhotos(completion: @escaping ([Photo]) -> Void) {
+        // Get a db reference
+        let db = Firestore.firestore()
+        
+        // Get all the documents from the photos collection
+        db.collection("photos").getDocuments { (snapshot, error) in
+            // Check for errors
+            if error != nil { return }
+            
+            // Get all the documents
+            guard let documents = snapshot?.documents else { return }
+            
+            // Create an array to hold all of our Photo structs
+            var photoArray = [Photo]()
+            
+            // Loop through the documents, create a Photo object for each
+            for doc in documents {
+                // Create photo object
+                let photo = Photo(snapshot: doc)
+                
+                if photo != nil {
+                    // store it in our array
+                    photoArray.insert(photo!, at: 0)
+                }
+            }
+            
+            // Pass back the photo array
+            completion(photoArray)
+        }
+    }
+    
     static func savePhoto(image: UIImage, progressUpdate: @escaping (Double) -> Void) {
         // Check that there's a user logged in
         if Auth.auth().currentUser == nil { return }
