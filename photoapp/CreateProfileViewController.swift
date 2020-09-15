@@ -12,9 +12,13 @@ import FirebaseAuth
 class CreateProfileViewController: UIViewController {
     
     @IBOutlet var usernameTextField: UITextField!
-
+    @IBOutlet var confirmButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // style the confirm button
+        confirmButton.layer.cornerRadius = 20
     }
 
     @IBAction func confirmTapped(_ sender: Any) {

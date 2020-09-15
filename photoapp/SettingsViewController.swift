@@ -11,8 +11,13 @@ import FirebaseAuth
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet var signOutButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // style the sign out button
+        signOutButton.layer.cornerRadius = 20
     }
     
     @IBAction func signOutTapped(_ sender: Any) {
